@@ -12,8 +12,8 @@ const getText = (path) => {
 
 const start = async () => {
   try {
-    const first = await getText("./content/first.txt");
-    const second = await getText("./content/second.txt");
+    const first = await getText("./content/first.js");
+    const second = await getText("./content/second.js");
     console.log(first, second);
   } catch (err) {
     console.log(err);
