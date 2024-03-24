@@ -1,10 +1,19 @@
-const { createReadStream } = require("fs");
+const express = require("express");
 
-const stream = createReadStream("./content/first.txt", "utf-8");
+const app = express();
 
-stream.on("data", (result) => {
-  console.log(result);
+app.get("/", (req, res) => {
+  res.status(200).send("Home Page");
 });
 
-// stream.pipe()
-// pipe is used to pushing from the read stream to write stream
+app.get("/about", (req, res) => {
+  res.status(200).send("About Page");
+});
+
+app.all("*", (req, res) => {
+  res.send("<h3>Resource not found</h3>");
+});
+
+app.listen(5000, () => {
+  console.log("Server is listening...");
+});
