@@ -8,6 +8,12 @@ app.get("/newClick/product", (req, res) => {
   res.send("Second Page!!!");
 });
 
+// route params: They are like placeholder where user provides data
+app.get("/newClick/product/:id", (req, res) => {
+  console.log("suk1", req.params);
+  res.send("Second Page!!!");
+});
+
 app.listen(5000, () => {
   console.log("Server is listening");
 });
