@@ -14,6 +14,14 @@ app.get("/newClick/product/:id/reviews/:productId", (req, res) => {
   res.send("Second Page!!!");
 });
 
+// query string:
+app.get("/api/v1", (req, res) => {
+  const { name } = req.query;
+  console.log("suk3", name);
+  console.log("suk2", req.query);
+  res.send("Query String!!");
+});
+
 app.listen(5000, () => {
   console.log("Server is listening");
 });
