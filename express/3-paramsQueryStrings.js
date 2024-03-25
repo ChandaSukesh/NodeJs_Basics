@@ -9,7 +9,7 @@ app.get("/newClick/product", (req, res) => {
 });
 
 // route params: They are like placeholder where user provides data
-app.get("/newClick/product/:id", (req, res) => {
+app.get("/newClick/product/:id/reviews/:productId", (req, res) => {
   console.log("suk1", req.params);
   res.send("Second Page!!!");
 });
