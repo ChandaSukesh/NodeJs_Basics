@@ -2,6 +2,7 @@ const app = require("express")();
 
 const logger = require("./logger");
 
+// if we have multiple middlewares then [middleware1,middleware2]
 app.get("/", logger, (req, res) => {
   res.send("My Home page");
 });
