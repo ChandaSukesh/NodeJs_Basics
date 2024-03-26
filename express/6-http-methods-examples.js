@@ -24,6 +24,7 @@ app.put("/api/people/:id", (req, res) => {
   const { id } = req.params;
   const { name } = req.body;
   res.status(200).send("hello world");
+  // should write update logic here based on filter or map or anything
 });
 
 app.listen(5000, () => {
