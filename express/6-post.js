@@ -4,9 +4,14 @@ const app = express();
 
 app.use(express.urlencoded({ extended: false }));
 
-// will not work just written for reference, not work becoz this is post so need to build form
+// can check it from postman
 app.post("/login", (req, res) => {
   console.log(req.body);
+  const { name } = req.body;
+  if (!name) {
+    res.status(400).json({ success: false, msg: "hi" });
+  }
+  res.status(200).json({ success: true, msg: "hello" });
 });
 
 app.get("/get-page", (req, res) => {
