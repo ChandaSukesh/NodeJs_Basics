@@ -14,8 +14,16 @@ app.post("/login", (req, res) => {
   res.status(200).json({ success: true, msg: "hello" });
 });
 
+//get method
 app.get("/get-page", (req, res) => {
   res.send("Welcome Page!!");
+});
+
+//put method
+app.put("/api/people/:id", (req, res) => {
+  const { id } = req.params;
+  const { name } = req.body;
+  res.status(200).send("hello world");
 });
 
 app.listen(5000, () => {
