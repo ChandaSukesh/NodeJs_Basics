@@ -2,6 +2,9 @@ const express = require("express");
 
 const app = express();
 
+//used for routing
+// const router = express.Router();
+
 app.use(express.urlencoded({ extended: false }));
 
 // can check it from postman
