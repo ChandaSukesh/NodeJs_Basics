@@ -9,6 +9,10 @@ app.post("/login", (req, res) => {
   console.log(req.body);
 });
 
+app.get("/get-page", (req, res) => {
+  res.send("Welcome Page!!");
+});
+
 app.listen(5000, () => {
   console.log("Server is listening...");
 });
