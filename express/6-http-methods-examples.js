@@ -27,6 +27,16 @@ app.put("/api/people/:id", (req, res) => {
   // should write update logic here based on filter or map or anything
 });
 
+//delete method
+
+app.delete("api/people/:id", (req, res) => {
+  const { id } = req.params;
+  const { name } = req.body;
+  res.status(200).send("hello world");
+  // should write delete logic here based on filter or map or anything
+  // note that here we send empty body as it is delete method.
+});
+
 app.listen(5000, () => {
   console.log("Server is listening...");
 });
